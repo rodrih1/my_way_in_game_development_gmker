@@ -1,9 +1,11 @@
+
 ysp += 0.3
+
 //creamos la gravedad para que caiga constantemente
- if keyboard_check(vk_up)
+ if mouse_check_button_pressed(mb_right)
         {
 			//si apretamos up va se resta a y 
-                ysp = -2        
+                ysp = -5        
         }
 //agregamos algunas coliciones 
 move_and_collide(0, ysp, oGame);
@@ -14,5 +16,7 @@ if (place_meeting(x, y , oPipe))
 }
 if (place_meeting(x, y, oBase))
 {
-	room_restart()
+	room_goto_next()
 }
+
+//if Room2  ysp =0
